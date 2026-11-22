@@ -6,6 +6,11 @@ name: ks-feedback
 description: "快手用户反馈洞察数据源（只读）：关键词搜视频、博主作品与粉丝数据、视频评论，输出 JSON，不登录不发布。触发词：快手、Kuaishou、kwai、快手搜索、快手评论、快手博主。用户要查快手视频、评论、爆款选题、竞品监控、KOL 筛选或评论舆情时使用；抖音、小红书、B站、微博、公众号不要用本技能。"
 license: MIT
 version: 1.1.3
+display_name: "快手用户反馈洞察｜高赞评论·需求提取·评论FAQ·改进线索"
+display_name_en: "Kuaishou Feedback"
+description_zh: "快手用户反馈洞察数据源（只读，无需登录快手账号，不发布、不点赞、不评论，无风控封号问题）：抓取快手公开数据并输出结构化 JSON，供 AI 做评论区需求挖掘与反馈聚类。四类取数：①关键词搜视频，支持综合/最多点赞/最新排序与近 1 日/7 日/半年时间窗、时长与内容类型筛选；②博主作品列表与粉丝数据，可传博主主页链接或快手号；③单条作品详情；④视频评论抓取，含高赞评论、评论时间与层级结构。内置需求挖掘剧本（search→comment），从高赞评论提取真实需求、痛点与高频问题，整理评论区 FAQ 与产品改进线索，可直接用于客服话术沉淀与竞品评论洞察。加 --save 或 GUAIKEI_ENABLE_LOG=1 可把结果与日志留底，便于二次分析。规模：按量单次最多 10000 条；包月搜索 30、作品 50、评论 60，超限返回 PLAN_LIMIT（退出码 1），可降 --limit 或升级套餐。仅需 Node.js 16.14+ 与 GUAIKEI_API_TOKEN。触发词：快手用户反馈、快手评论需求挖掘、高赞评论分析、快手评论舆情、kuaishou feedback、kwai comment insights。"
+description_en: "Read-only Kuaishou feedback-insight data source: no login to your Kuaishou account, no publishing, liking or commenting, no ban risk. Scrapes public Kuaishou data and returns structured JSON for AI comment mining and feedback clustering. Four capabilities: 1) Keyword video search with relevance, most-liked or newest sorting, 1/7/180-day windows and duration/content-type filters. 2) Creator post lists with follower data, by profile URL or Kuaishou ID. 3) Single-post details. 4) Video comments with high-like comments, timestamps and reply structure. A built-in playbook (search then comment) extracts real needs, pain points and recurring questions from high-like comments, then organizes comment FAQs and improvement clues. Add --save or GUAIKEI_ENABLE_LOG=1 to keep results and logs. Scale: pay-as-you-go up to 10,000 items per call; monthly plans cap search at 30, posts at 50 and comments at 60, returning PLAN_LIMIT (exit code 1) when exceeded. Needs Node.js 16.14+ and GUAIKEI_API_TOKEN."
+author: "新郑市怪奇信息技术工作室"
 metadata:
   openclaw:
     emoji: "📷"
